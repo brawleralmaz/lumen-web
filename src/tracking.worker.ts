@@ -5,12 +5,12 @@ self.onmessage = async (e: MessageEvent) => {
   if (m.type === "init") {
     try {
       const files = await FilesetResolver.forVisionTasks(
-        m.base + "/tracking/wasm",
+        m.base + "tracking/wasm",
         true,
       );
       detector = await HandLandmarker.createFromOptions(files, {
         baseOptions: {
-          modelAssetPath: m.base + "/tracking/hand_landmarker.task",
+          modelAssetPath: m.base + "tracking/hand_landmarker.task",
           delegate: "CPU",
         },
         runningMode: "VIDEO",

@@ -109,7 +109,10 @@ export function useCamera(
             onFrame(m.hands, m.timestamp);
           }
         };
-        worker.postMessage({ type: "init", base: location.origin });
+        worker.postMessage({
+          type: "init",
+          base: new URL(import.meta.env.BASE_URL, location.origin).href,
+        });
         const tick = () => {
           if (!alive) return;
           const now = performance.now();

@@ -16,7 +16,7 @@ npm run build
 npm run preview
 ```
 
-Deploy the contents of `dist/` to an HTTPS static host. This build expects to be hosted at the origin root. No API keys, backend, accounts, or server camera processing are needed. All runtime assets, including tracking model and WASM binaries, are bundled locally. Camera frames are neither stored nor uploaded. Camera tracks stop on exit, when switched off, and on entry to mouse mode.
+The GitHub Pages workflow builds and deploys `dist/` on pushes to `master`. It detects the Pages base path, so project pages and custom domains both work. To build locally for a project path, set `PAGES_BASE_PATH` (for example, `/lumen-web`) before `npm run build`; without it, the build targets the origin root. No API keys, backend, accounts, or server camera processing are needed. All runtime assets, including tracking model and WASM binaries, are bundled locally. Camera frames are neither stored nor uploaded. Camera tracks stop on exit, when switched off, and on entry to mouse mode.
 
 ## Explore
 

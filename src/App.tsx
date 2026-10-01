@@ -379,7 +379,11 @@ export default function App() {
         </a>
         <span>Knowledge, within reach.</span>
         <div>
-          <a href="/credits.html" target="_blank" rel="noreferrer">
+          <a
+            href={`${import.meta.env.BASE_URL}credits.html`}
+            target="_blank"
+            rel="noreferrer"
+          >
             Model credits ↗
           </a>
           <span>© {new Date().getFullYear()} Lumen</span>

@@ -7,7 +7,7 @@ export const categories: Category[] = [
     field: "THE LIVING WORLD",
     description: "Get closer to the structures that make us human.",
     specimen: "Human heart",
-    asset: "/models/heart.glb",
+    asset: `${import.meta.env.BASE_URL}models/heart.glb`,
     credit: "Kristen Browne & Heidi Schlehlein · Human Reference Atlas",
     source: "https://humanatlas.io/3d-reference-library",
     license: "CC BY 4.0",
@@ -30,7 +30,7 @@ export const categories: Category[] = [
     field: "INSIDE THE MACHINE",
     description: "Look beyond the screen. Discover what powers it.",
     specimen: "Motherboard & components",
-    asset: "/models/motherboard.glb",
+    asset: `${import.meta.env.BASE_URL}models/motherboard.glb`,
     credit: "Daniel Cardona · MotherBoard + Components",
     source:
       "https://sketchfab.com/3d-models/motherboard-components-3bc94057328243d4b341a55f59160f8a",
